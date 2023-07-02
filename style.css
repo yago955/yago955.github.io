@@ -1,0 +1,92 @@
+.slider {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(119, 119, 119, 0.4);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 250px; /* Adjust the width as needed */
+}
+.slider_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px; /* Adjust the margin-top value as needed */
+}
+
+.slider a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slider a:hover {
+    transform: scale(1.1); /* Increase the size of the link on hover */
+}
+
+
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Add some margin below the picture */
+}
+
+.profile-picture img {
+    width: 135px; /* Adjust the width as needed */
+    height: 135px; /* Adjust the height as needed */
+    border-radius: 50%; /* Creates a circular shape */
+    overflow: hidden; /* Ensures the image stays within the circle */
+}
+.name {
+    font-family: "Centu", "Times Roman", serif;
+    font-size: 18px; /* Adjust the font size as needed */
+    margin-top: 10px; /* Add some space between the picture and name */
+    margin-bottom: 10px; /* Add some space between the name and links */
+    text-align: center; /* Center the name text */
+}
+#content-container {
+    margin-left: 280px; /* Add some space to the right of the slider */
+}
+
+.social-icons {
+    margin-top: 80px; /* Push the social icons to the bottom of the slider */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    font-size: 16px; /* Adjust the icon size as needed */
+    color: #777777; /* Greyish color for the icons */
+    margin: 5px; /* Add some spacing between the icons */
+    text-decoration: none;
+}
+
+/* Example of media query for smaller screens (e.g., tablets) */
+@media screen and (max-width: 768px) {
+    .slider {
+        width: 150px; /* Adjust the width for smaller screens */
+    }
+}
+
+/* Example of media query for even smaller screens (e.g., smartphones) */
+@media screen and (max-width: 480px) {
+    .slider {
+        display: none; /* Hide the slider on smaller screens */
+    }
+
+    #content-container {
+        margin: 0; /* Remove margin for the content container */
+    }
+}
+
+These are just some examples, and you may need to modify the CSS for other elements and sections of your website to make them fully responsive. By using relative units and media queries, you can create a responsive design that adapts to different screen sizes and devices.

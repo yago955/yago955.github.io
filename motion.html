@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Motion</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Function to fetch video thumbnail and set it in the img tag
+            function fetchVideoThumbnail(videoId, imgElement) {
+                // Replace YOUR_YOUTUBE_API_KEY with your actual YouTube API key
+                const apiKey = 'AIzaSyCO8xnHoolwG4OKvabTmvY70GnY0C-P2hE';
+                const apiUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${apiKey}`;
+
+                fetch(apiUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        const videoTitle = data.items[0].snippet.title;
+                        const thumbnailUrl = data.items[0].snippet.thumbnails.medium.url;
+
+                        imgElement.src = thumbnailUrl;
+                        imgElement.alt = videoTitle;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching video data:', error);
+                    });
+            }
+
+            // Fetch video thumbnails for each video link with data-video-id attribute
+            $('img[data-video-id]').each(function() {
+                const videoId = $(this).attr('data-video-id');
+                fetchVideoThumbnail(videoId, this);
+            });
+        });
+    </script>
+    <style>
+        @font-face {
+            font-family: 'AbrilFatface';
+            src: url('AbrilFatface-Regular.ttf') format('truetype');
+        }
+        .video-thumbnail {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .video-thumbnail img {
+            width: 300px; /* Adjust the width as needed */
+            height: auto;
+            cursor: pointer;
+        }
+
+        .video-title {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+<div class="slider">
+    <div class="slider_content">
+        <div class="profile-picture">
+            <img src="sliderimg.jpg" alt="slider pic">
+        </div>
+        <div class="name" style="font-family: AbrilFatface">Anubhab Baruah</div>
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="education.html">Education</a>
+        <a href="work.html">Work</a>
+        <a href="photo_video.html">Photography/Motion</a>
+        <a href="contact.html">Contact</a>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/bobsama__/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/anubhab-baruah-524aa4241/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/@bobsama_" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</div>
+<div id="content-container">
+    <div class="video-thumbnail">
+        <a href="https://www.youtube.com/watch?v=WVdA6BUXWMQ" target="_blank">
+            <img src="" alt="Video 1 Thumbnail" data-video-id="WVdA6BUXWMQ">
+        </a>
+        <p class="video-title">Farewell 2022</p>
+    </div>
+
+    <div class="video-thumbnail">
+        <a href="https://www.youtube.com/watch?v=uaz5kxxOa6A" target="_blank">
+            <img src="" alt="Video 2 Thumbnail" data-video-id="uaz5kxxOa6A">
+        </a>
+        <p class="video-title">inSCIgnis'23 Official Trailer</p>
+    </div>
+
+    <!-- Add more video thumbnails and titles as needed -->
+</div>
+
+</body>
+</html>
