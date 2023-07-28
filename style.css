@@ -55,6 +55,10 @@
 }
 #content-container {
     margin-left: 280px; /* Add some space to the right of the slider */
+<<<<<<< HEAD
+=======
+
+>>>>>>> 39c1842 (Adding new files to the main repo folder)
 }
 
 .social-icons {
@@ -72,9 +76,23 @@
 }
 
 /* Example of media query for smaller screens (e.g., tablets) */
+<<<<<<< HEAD
 @media screen and (max-width: 768px) {
     .slider {
         width: 150px; /* Adjust the width for smaller screens */
+=======
+@media screen and (max-width: 600px) {
+    .slider {
+        width: 150px;
+        font-size: 12px;/* Adjust the width for smaller screens */
+    }
+    .name{
+        font-size: 15px;
+    }
+    .sliderimg{
+        max-width: 70%;
+        max-height: 70%;
+>>>>>>> 39c1842 (Adding new files to the main repo folder)
     }
 }
 
@@ -83,10 +101,82 @@
     .slider {
         display: none; /* Hide the slider on smaller screens */
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 39c1842 (Adding new files to the main repo folder)
     #content-container {
         margin: 0; /* Remove margin for the content container */
     }
 }
+<<<<<<< HEAD
 
 These are just some examples, and you may need to modify the CSS for other elements and sections of your website to make them fully responsive. By using relative units and media queries, you can create a responsive design that adapts to different screen sizes and devices.
+=======
+.indexheadings {
+    font-family: 'AbrilFatface', Century, sans-serif;
+    margin-bottom: 3px;
+    letter-spacing: 5px;
+    font-size: 50px;
+}
+
+.indexheadings:nth-of-type(n+2) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-size: 50px;
+    color: #777777;
+}
+.responsive-image {
+    max-width: 280px; /* Set the maximum width to 280px */
+    height: auto;
+    position: absolute; /* Set the image to absolute positioning */
+    bottom: 0; /* Position the image at the bottom */
+    right: 0; /* Position the image at the right */
+}
+
+@media (max-width: 1000px) {
+    .responsive-image {
+        max-width: 40%; /* Reduce the image size to 40% of the available width */
+        position: relative;
+    }
+    .indexheadings {
+        font-size: 35px; /* Reduce the heading font size for smaller viewports */
+    }
+    .indexheadings:nth-of-type(n+2) {
+        font-size: 35px; /* Reduce the heading font size for smaller viewports */
+    }
+    #content-container {
+    }
+}
+@media (max-width: 600px) {
+    .responsive-image {
+        max-width: 30%; /* Reduce the image size to 40% of the available width */
+        position: absolute;
+    }
+    .indexheadings {
+        font-size: 25px; /* Reduce the heading font size for smaller viewports */
+    }
+    .indexheadings:nth-of-type(n+2) {
+        font-size: 25px; /* Reduce the heading font size for smaller viewports */
+    }
+    #content-container {
+        margin-left: 35%;
+    }
+}
+
+/* Media query for smaller viewport (e.g., when the browser window is less than 600px wide) */
+@media (max-width: 480px) {
+    .indexheadings {
+        font-size: 30px; /* Reduce the heading font size for smaller viewports */
+    }
+    .indexheadings:nth-of-type(n+2) {
+        font-size: 30px; /* Reduce the heading font size for smaller viewports */
+    }
+
+    #content-container {
+        margin-left: 0; /* Remove the left margin for the content container */
+        flex-direction: column; /* Stack the content vertically on smaller screens */
+    }
+}
+>>>>>>> 39c1842 (Adding new files to the main repo folder)
