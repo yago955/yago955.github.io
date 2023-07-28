@@ -1,0 +1,164 @@
+.slider {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(119, 119, 119, 0.4);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 250px; /* Adjust the width as needed */
+}
+.slider_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px; /* Adjust the margin-top value as needed */
+}
+
+.slider a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slider a:hover {
+    transform: scale(1.1); /* Increase the size of the link on hover */
+}
+
+
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Add some margin below the picture */
+}
+
+.profile-picture img {
+    width: 135px; /* Adjust the width as needed */
+    height: 135px; /* Adjust the height as needed */
+    border-radius: 50%; /* Creates a circular shape */
+    overflow: hidden; /* Ensures the image stays within the circle */
+}
+.name {
+    font-family: "Centu", "Times Roman", serif;
+    font-size: 18px; /* Adjust the font size as needed */
+    margin-top: 10px; /* Add some space between the picture and name */
+    margin-bottom: 10px; /* Add some space between the name and links */
+    text-align: center; /* Center the name text */
+}
+#content-container {
+    margin-left: 280px; /* Add some space to the right of the slider */
+
+}
+
+.social-icons {
+    margin-top: 80px; /* Push the social icons to the bottom of the slider */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    font-size: 16px; /* Adjust the icon size as needed */
+    color: #777777; /* Greyish color for the icons */
+    margin: 5px; /* Add some spacing between the icons */
+    text-decoration: none;
+}
+
+/* Example of media query for smaller screens (e.g., tablets) */
+@media screen and (max-width: 600px) {
+    .slider {
+        width: 150px;
+        font-size: 12px;/* Adjust the width for smaller screens */
+    }
+    .name{
+        font-size: 15px;
+    }
+    .sliderimg{
+        max-width: 70%;
+        max-height: 70%;
+    }
+}
+
+/* Example of media query for even smaller screens (e.g., smartphones) */
+@media screen and (max-width: 480px) {
+    .slider {
+        display: none; /* Hide the slider on smaller screens */
+    }
+    #content-container {
+        margin: 0; /* Remove margin for the content container */
+    }
+}
+.indexheadings {
+    font-family: 'AbrilFatface', Century, sans-serif;
+    margin-bottom: 3px;
+    letter-spacing: 5px;
+    font-size: 50px;
+}
+
+.indexheadings:nth-of-type(n+2) {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-size: 50px;
+    color: #777777;
+}
+.responsive-image {
+    max-width: 280px; /* Set the maximum width to 280px */
+    height: auto;
+    position: absolute; /* Set the image to absolute positioning */
+    bottom: 0; /* Position the image at the bottom */
+    right: 0; /* Position the image at the right */
+}
+
+@media (max-width: 1000px) {
+    .responsive-image {
+        max-width: 40%; /* Reduce the image size to 40% of the available width */
+        position: relative;
+    }
+    .indexheadings {
+        font-size: 35px; /* Reduce the heading font size for smaller viewports */
+    }
+    .indexheadings:nth-of-type(n+2) {
+        font-size: 35px; /* Reduce the heading font size for smaller viewports */
+    }
+    #content-container {
+    }
+}
+@media (max-width: 600px) {
+    .responsive-image {
+        max-width: 30%; /* Reduce the image size to 40% of the available width */
+        position: absolute;
+    }
+    .indexheadings {
+        font-size: 25px; /* Reduce the heading font size for smaller viewports */
+    }
+    .indexheadings:nth-of-type(n+2) {
+        font-size: 25px; /* Reduce the heading font size for smaller viewports */
+    }
+    #content-container {
+        margin-left: 35%;
+    }
+}
+
+/* Media query for smaller viewport (e.g., when the browser window is less than 600px wide) */
+@media (max-width: 480px) {
+    .indexheadings {
+        font-size: 30px; /* Reduce the heading font size for smaller viewports */
+    }
+    .indexheadings:nth-of-type(n+2) {
+        font-size: 30px; /* Reduce the heading font size for smaller viewports */
+    }
+
+    #content-container {
+        margin-left: 0; /* Remove the left margin for the content container */
+        flex-direction: column; /* Stack the content vertically on smaller screens */
+    }
+}
