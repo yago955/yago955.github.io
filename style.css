@@ -55,10 +55,7 @@
 }
 #content-container {
     margin-left: 280px; /* Add some space to the right of the slider */
-<<<<<<< HEAD
-=======
 
->>>>>>> 39c1842 (Adding new files to the main repo folder)
 }
 
 .social-icons {
@@ -76,11 +73,6 @@
 }
 
 /* Example of media query for smaller screens (e.g., tablets) */
-<<<<<<< HEAD
-@media screen and (max-width: 768px) {
-    .slider {
-        width: 150px; /* Adjust the width for smaller screens */
-=======
 @media screen and (max-width: 600px) {
     .slider {
         width: 150px;
@@ -92,7 +84,6 @@
     .sliderimg{
         max-width: 70%;
         max-height: 70%;
->>>>>>> 39c1842 (Adding new files to the main repo folder)
     }
 }
 
@@ -101,18 +92,10 @@
     .slider {
         display: none; /* Hide the slider on smaller screens */
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> 39c1842 (Adding new files to the main repo folder)
     #content-container {
         margin: 0; /* Remove margin for the content container */
     }
 }
-<<<<<<< HEAD
-
-These are just some examples, and you may need to modify the CSS for other elements and sections of your website to make them fully responsive. By using relative units and media queries, you can create a responsive design that adapts to different screen sizes and devices.
-=======
 .indexheadings {
     font-family: 'AbrilFatface', Century, sans-serif;
     margin-bottom: 3px;
@@ -179,4 +162,3 @@ These are just some examples, and you may need to modify the CSS for other eleme
         flex-direction: column; /* Stack the content vertically on smaller screens */
     }
 }
->>>>>>> 39c1842 (Adding new files to the main repo folder)
